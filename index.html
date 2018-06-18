@@ -18,8 +18,8 @@
   top: 220px;
   right: 620px;
     }
-    
-      @media only screen and (max-width: 1024px) {
+
+    @media only screen and (max-width: 1024px) {
 
   img{
     height: 200px;
@@ -43,6 +43,10 @@
 
 }
 
+p{
+	display: none;
+}
+
 /*ONCE IT GETS UNDER 500 YOU WANT TO MOVE THINGS TO THE LEFT
 
 OR IS IT ONCE IT GETS 768 AND UNDER?
@@ -57,9 +61,8 @@ INFACT IT EVEN LOOKS OFF ON THE IPOD PRO
 I THINK I MAY NEED TO REMAKE THIS FROM SCRATH, BUT FOR NOW WE'LL
 STICK WITH THE MINOR CHANGES */
 
+    
   </style>
-  
-
 </head>
 
 <body>
@@ -85,6 +88,7 @@ STICK WITH THE MINOR CHANGES */
 
 <button style= "color:red;" id = "1" onClick = "cut(this.id)">Cut the red wire</button> <button style = "color: blue" id = "2" onClick = "cut(this.id)">Cut the blue wire</button> <button style="color:green;" id = "3" onClick = "cut(this.id)">Cut the green wire</button>
 
+<p><a href ="#"> Try again?</a></p>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src = "bomb.js" type = "text/javascript"></script>
