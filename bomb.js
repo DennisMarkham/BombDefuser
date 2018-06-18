@@ -1,4 +1,4 @@
- 
+  
 
     // $("#bomb").hide();
 
@@ -34,6 +34,8 @@
       //hide cut wire buttons
       $("button").hide();
       $("#time").hide();
+
+      $("p").show();
       boom.play();
     }
 
@@ -47,10 +49,15 @@
       //hide cut wire buttons
       $("button").hide();
       $("#time").hide();
-      //timer needs to stop, how do I do this?
+      
+      $("p").show();
       alreadyWon = true;
       applause.play();
 }
+
+$("p").click(function(){
+     location.reload();
+});
 
     setTimeout(bombTimer, 1000 * 120);
     setTimeout(time, 1000 * 1);
