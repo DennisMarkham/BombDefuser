@@ -1,4 +1,4 @@
-  
+   
 
     // $("#bomb").hide();
 
@@ -26,31 +26,57 @@
 
     function detonate(){
       //change image src to explosion, alt to explosion, and change size?
-      $("img").attr({
-        "src" : "images/explosion.png",
-        "alt" : "explosion"
-      });
+      $("img").hide();
+
+
+      $("body").css("background", "url('images/explosion.png') no-repeat center center fixed");
+      $("body").css("-webkit-background-size", "cover");
+      $("body").css("-moz-background-size", "cover");
+      $("body").css("-o-background-size", "cover");
+      $("body").css("background-size", "cover");
+
+  //     $("body").attr({
+  //       "background" : "url('images/explosion.png') no-repeat center center fixed",
+  //       "-webkit-background-size" : "cover",
+  // "-moz-background-size" : "cover",
+  // "-o-background-size" : "cover",
+  // "background-size" : "cover"
+  //     });
+
 
       //hide cut wire buttons
       $("button").hide();
       $("#time").hide();
 
-      $("p").show();
+      $("p").delay(2500).fadeIn();
       boom.play();
     }
 
     function victory() {
- $("img").attr({
-        "src" : "images/victory.png",
-        "alt" : "victory",
-        "height" : "600px"
-      });
+      $("img").hide();
+
+        $("body").css("background", "url('images/victory.png') no-repeat center center fixed");
+      $("body").css("-webkit-background-size", "cover");
+      $("body").css("-moz-background-size", "cover");
+      $("body").css("-o-background-size", "cover");
+      $("body").css("background-size", "cover");
+
+  //      $("body").attr({
+  //       "background" : "url('images/victory.png') no-repeat center center fixed",
+  //       "-webkit-background-size" : "cover",
+  // "-moz-background-size" : "cover",
+  // "-o-background-size" : "cover",
+  // "background-size" : "cover"
+  //     });
 
       //hide cut wire buttons
       $("button").hide();
       $("#time").hide();
       
-      $("p").show();
+      $("p").delay(2500).fadeIn();
+    
+
+
       alreadyWon = true;
       applause.play();
 }
