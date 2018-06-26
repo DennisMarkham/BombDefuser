@@ -1,0 +1,57 @@
+ @font-face {
+    font-family: digital-7;
+    src: url(digital-7.ttf);
+}
+
+  #time {
+  	font-family: "digital-7";
+   	color: red;
+   	background: black;
+   	border-style: outset;
+   	padding: 5px;
+   	margin: 10px;
+  }
+
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 33%;
+    }
+
+    #livingRoom{
+  position: absolute;
+  top: 220px;
+  right: 620px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+
+  img{
+    height: 200px;
+  }
+
+  button{
+    margin: 10px;
+  }
+
+ }
+
+    @media only screen and (max-width: 500px) {
+
+  img{
+    height: 100px;
+  }
+
+  button{
+    margin: 10px;
+  }
+
+}
+
+p{
+	display: none;
+	font-size: 500%;
+	text-align: center;
+}
+
+
