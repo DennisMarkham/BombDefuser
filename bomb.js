@@ -47,7 +47,8 @@
       //hide cut wire buttons
       $("button").hide();
       $("#time").hide();
-
+      $("#timeContainer").hide();
+       
       $("p").delay(2500).fadeIn();
       boom.play();
     }
@@ -72,6 +73,7 @@
       //hide cut wire buttons
       $("button").hide();
       $("#time").hide();
+      $("#timeContainer").hide();
       
       $("p").delay(2500).fadeIn();
     
