@@ -3,13 +3,20 @@
     src: url(digital-7.ttf);
 }
 
-  #time {
+#time {
   	font-family: "digital-7";
    	color: red;
-   	background: black;
-   	border-style: outset;
-   	padding: 5px;
-   	margin: 10px;
+    float: right;
+   	
+  }
+
+  #timeContainer
+  {
+    background: black;
+    border-style: outset;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
   }
 
     body {
