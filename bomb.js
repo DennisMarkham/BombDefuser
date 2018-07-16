@@ -48,6 +48,7 @@
       $("button").hide();
       $("#time").hide();
       $("#timeContainer").hide();
+      $("#hint").hide();
        
       $("p").delay(2500).fadeIn();
       boom.play();
@@ -74,6 +75,7 @@
       $("button").hide();
       $("#time").hide();
       $("#timeContainer").hide();
+       $("#hide").hide();
       
       $("p").delay(2500).fadeIn();
     
