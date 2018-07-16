@@ -75,7 +75,7 @@
       $("button").hide();
       $("#time").hide();
       $("#timeContainer").hide();
-       $("#hide").hide();
+       $("#hint").hide();
       
       $("p").delay(2500).fadeIn();
     
