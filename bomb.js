@@ -10,6 +10,8 @@
     var boom = new Audio("boom.mp3");
 
     var applause = new Audio("victory.wav");
+
+    var beep = new Audio("beep1.wav");
     
     boom.volume = 0.4;
     applause.volume = 0.4;
