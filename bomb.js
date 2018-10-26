@@ -114,6 +114,7 @@ $("p").click(function(){
 
     function time(){
       counter--;
+       beep.play();
       counterConverted = timeConverter(counter);
       $("#time").text(counterConverted);
        setTimeout(time, 1000 * 1);
