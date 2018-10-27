@@ -1,4 +1,4 @@
-   
+ 
 
     // $("#bomb").hide();
 
@@ -13,6 +13,16 @@
 
     var beep = new Audio("beep1.wav");
     
+    var shouldBeep = true;
+
+    function stopBeep(){
+    	shouldBeep = false;
+    }
+
+    function startBeep(){
+    	shouldBeep = true;
+    }
+
     boom.volume = 0.4;
     applause.volume = 0.4;
 
@@ -22,11 +32,14 @@
 
     var counter = 120;
 
+ 
+
     //okay, so how do I do this?  I assign a number value to each button
     //then if random = value of button just pressed, this.id or this.value or whatever,
     //trigger a victory
 
     function detonate(){
+    	stopBeep();
       //change image src to explosion, alt to explosion, and change size?
       $("img").hide();
 
@@ -51,12 +64,13 @@
       $("#time").hide();
       $("#timeContainer").hide();
       $("#hint").hide();
-       
+
       $("p").delay(2500).fadeIn();
       boom.play();
     }
 
     function victory() {
+    	stopBeep();
       $("img").hide();
 
         $("body").css("background", "url('images/victory.png') no-repeat center center fixed");
@@ -77,7 +91,8 @@
       $("button").hide();
       $("#time").hide();
       $("#timeContainer").hide();
-       $("#hint").hide();
+      $("#hint").hide();
+      
       
       $("p").delay(2500).fadeIn();
     
@@ -114,7 +129,13 @@ $("p").click(function(){
 
     function time(){
       counter--;
-       //beep.play();
+
+      if (shouldBeep === true)
+      	{
+      		beep.play();
+      	}
+      
+
       counterConverted = timeConverter(counter);
       $("#time").text(counterConverted);
        setTimeout(time, 1000 * 1);
