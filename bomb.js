@@ -1,4 +1,7 @@
  
+ function loadModal(){
+        $('#myModal').removeClass("hide").modal('show');
+    }
 
     // $("#bomb").hide();
 
@@ -30,7 +33,7 @@
 
     console.log(randomWire);
 
-    var counter = 120;
+    var counter = 59;
 
  
 
@@ -106,7 +109,7 @@ $("p").click(function(){
      location.reload();
 });
 
-    setTimeout(bombTimer, 1000 * 120);
+    setTimeout(bombTimer, 1000 * 59);
     setTimeout(time, 1000 * 1);
 
     function timeConverter(t){
