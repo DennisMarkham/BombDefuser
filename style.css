@@ -4,6 +4,8 @@
   text-align: center;
  }
 
+
+
  img {
   height: 300px;
  }
@@ -16,16 +18,25 @@
   #time {
   	font-family: "digital-7";
    	color: red;
-    float: right;
-   	
+    
+    /*position: absolute;
+    top:0px;
+    padding: 0px;
+    margin: 0px;*/
+    position: absolute;
+   	top:0px;
+    padding: 0px;
+    margin-left: 10px;
+    /*Why can't I float this right!?  It looks so much better floating right*/
+    text-align: center;
   }
 
   #timeContainer
   {
     background: black;
     border-style: outset;
-    width: 100px;
-    height: 50px;
+    width: 130px;
+    height: 60px;
     padding: 5px;
   }
 
@@ -64,7 +75,10 @@
   }
 
 
-
+#help
+{
+margin-right:10px;
+}
 
 body {
   margin-left: 5px;
