@@ -1,4 +1,17 @@
  
+ function switchBeeps(){
+  if (shouldBeep == true)
+  {
+    shouldBeep = false;
+    $("#muteBeeps").html("<span class='glyphicon glyphicon-volume-up'></span> Unmute Beeps?");
+  }
+  else
+  {
+    shouldBeep = true;
+    $("#muteBeeps").html("<span class='glyphicon glyphicon-volume-off'></span> Mute Beeps?");
+  }
+ }
+
  function loadModal(){
         $('#myModal').removeClass("hide").modal('show');
     }
@@ -28,12 +41,14 @@
 
     boom.volume = 0.4;
     applause.volume = 0.4;
+    beep.volume = 0.4;
 
     var randomWire = Math.floor(Math.random() * 3) + 1;
 
     console.log(randomWire);
 
     var counter = 59;
+
 
  
 
