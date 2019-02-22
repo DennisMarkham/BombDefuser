@@ -5,6 +5,12 @@
  }
 
 
+#muteBeeps
+{
+  margin-top:10px;
+  float: right;
+  border-radius: 5px;
+}
 
  img {
   height: 300px;
