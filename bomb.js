@@ -1,14 +1,24 @@
  
+//Okay, new problem.  When you click "mute beeps" and then go back, the button is not
+//what it should be
+
+
+
+
+
+console.log(beepPreference);
  function switchBeeps(){
-  if (shouldBeep == true)
+  if (everBeep == true)
   {
-    shouldBeep = false;
-    $("#muteBeeps").html("<span class='glyphicon glyphicon-volume-up'></span> Unmute Beeps?");
+    everBeep = false;
+   $("#muteBeeps").html("<span class='glyphicon glyphicon-volume-up'></span> Unmute Beeps?");
+    localStorage.setItem("everBeep","silence");
   }
   else
   {
-    shouldBeep = true;
+    everBeep = true;
     $("#muteBeeps").html("<span class='glyphicon glyphicon-volume-off'></span> Mute Beeps?");
+  localStorage.setItem("everBeep","sound");
   }
  }
 
@@ -29,14 +39,28 @@
 
     var beep = new Audio("beep1.wav");
     
-    var shouldBeep = true;
+    var everBeep = true;
+
+    var beepPreference = localStorage.getItem("everBeep");
+
+    if (beepPreference == "silence")
+    {
+     $("#muteBeeps").html("<span class='glyphicon glyphicon-volume-up'></span> Unmute Beeps?");
+    }
+
+    var beepNow = true;
+
+    if (beepPreference == "silence")
+    {
+      var everBeep = false;
+    }
 
     function stopBeep(){
-    	shouldBeep = false;
+      beepNow = false;
     }
 
     function startBeep(){
-    	shouldBeep = true;
+      beepNow = true;
     }
 
     boom.volume = 0.4;
@@ -57,7 +81,7 @@
     //trigger a victory
 
     function detonate(){
-    	stopBeep();
+      stopBeep();
       //change image src to explosion, alt to explosion, and change size?
       $("img").hide();
 
@@ -88,7 +112,7 @@
     }
 
     function victory() {
-    	stopBeep();
+      stopBeep();
       $("img").hide();
 
         $("body").css("background", "url('images/victory.png') no-repeat center center fixed");
@@ -148,10 +172,10 @@ $("p").click(function(){
     function time(){
       counter--;
 
-      if (shouldBeep === true)
-      	{
-      		beep.play();
-      	}
+      if (beepNow == true && everBeep == true)
+        {
+          beep.play();
+        }
       
 
       counterConverted = timeConverter(counter);
