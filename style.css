@@ -1,9 +1,13 @@
- p {
-  display: none;
-  font-size: 500%;
-  text-align: center;
- }
-
+ 
+  #timeContainer
+  {
+    background: black;
+    border-style: outset;
+    width: 130px;
+    height: 60px;
+    padding: 5px;
+    float: left;
+  }
 
 #muteBeeps
 {
@@ -11,6 +15,19 @@
   float: right;
   border-radius: 5px;
 }
+
+   body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 33%;
+    }
+
+ p {
+  display: none;
+  font-size: 500%;
+  text-align: center;
+ }
+
 
  img {
   height: 300px;
@@ -37,20 +54,9 @@
     text-align: center;
   }
 
-  #timeContainer
-  {
-    background: black;
-    border-style: outset;
-    width: 130px;
-    height: 60px;
-    padding: 5px;
-  }
 
-    body {
-      margin-left: auto;
-      margin-right: auto;
-      width: 33%;
-    }
+
+ 
 
     #livingRoom{
   position: absolute;
@@ -58,7 +64,7 @@
   right: 620px;
     }
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1000px) {
 
   img{
     height: 200px;
@@ -68,17 +74,6 @@
     margin: 10px;
   }
 
-
-
- }
-
-    @media only screen and (max-width: 500px) {
-
-  
-
-  button{
-    margin: 10px;
-  }
 
 
 #help
